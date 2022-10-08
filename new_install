@@ -1,0 +1,56 @@
+Things to install on the new Void install:
+- Fish shell: with omf (oh my fish, boxfish theme) and a config will be made 
+in a github repo
+- Dillo and Brave
+- Nvim and DOOM Emacs
+- ranger
+- Simple Terminal (install some patches for fucks sake)
+- yt-dlp
+- qbittorrent
+
+Nvim:
+  default AstroNvim
+
+DOOM Emacs:
+  almost-mono-theme
+  packages.el:
+  (package! key-chord)
+  (package! gruber-darker-theme)
+  (package! poet-theme)
+  (package! almost-mono-themes)
+
+  config.el:
+  ;; Some themes I like: `gruber-darker', `almost-mono-black'
+  (setq doom-theme 'almost-mono-black)
+
+  ;;Exit insert mode by pressing j and then j quickly
+  (setq key-chord-two-keys-delay 0.5)
+  (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+  (key-chord-mode 1)
+
+aliases:
+
+alias lres="xrandr -s 1368x768"
+alias hres="xrandr -s 1920x1080"
+alias em="emacsclient -c -a 'nvim'"
+alias vt="~/dev/c/vim-train/vt"
+alias unic="~/dev/c/unic/unic"
+alias deeznuts="dnf"
+alias tlauncher="java -jar ~/TLauncher/TLauncher-2.841.jar"
+alias oolite="~/GNUstep/Applications/Oolite/oolite"
+alias rednight="redshift -b 0.5 -l manual:lat=44.426765:lon=26.102537 &"
+alias redquit="redshift -x && pkill redshift"
+alias clear="clear && printf '\n%.0s' {1..100}" 
+alias cl="clear && printf '\n%.0s' {1..100}" 
+alias yt-music="yt-dlp -x --audio-quality 0 --embed-metadata --embed-thumbnail -P ~/music/"
+alias yt-vid="yt-dlp -P ~/Videos/youtube/"
+alias distro='cat /etc/*-release'
+alias key-ro="setxkbmap -layout ro"
+alias key-us="setxkbmap -layout us"
+alias cpc="xclip -sel c -r < "
+alias frecord="ffmpeg -video_size 1280x720 -framerate 30 -f x11grab -i :0.0+0,0 -c:v libx264rgb -crf 0 -preset ultrafast "
+alias shitless="inxi -CDGISmzy 130 -c 10"
+
+# =============== Config Aliases ===============
+alias zshc="nvim ~/.zshrc" 
+alias i3c="nvim ~/.config/i3/config"
