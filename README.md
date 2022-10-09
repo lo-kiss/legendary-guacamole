@@ -41,6 +41,9 @@ For anything that is public-domain, create a subdirectory called public_domain/
 
 ## Naming Conv
 Exeptions are 'dev/'
+For artwork put the license at the end on the filename
+
+"file_name_2022-10-08_CC0"
 
 use descriptive names
 use all lowercase for file names
