@@ -1,1 +1,43 @@
-/home/rafael/.config/i3status/config
+# see "man i3status" for documentation.
+general {
+        colors = true
+        interval = 5
+}
+
+order += "wireless _first_"
+order += "volume master"
+order += "disk /"
+order += "load"
+order += "memory"
+order += "tztime local"
+
+wireless _first_ {
+        format_up = "wifi-%quality"
+        format_down = "wifi-down"
+}
+
+volume master {
+  format = "v %volume"
+  format_muted = "v muted"
+  device = "default"
+  mixer = "Master"
+  mixer_idx = 0
+}
+
+disk "/" {
+        format = "porn folder = %avail"
+}
+
+load {
+        format = "l: %1min"
+}
+
+memory {
+        format = "m %used"
+        threshold_degraded = "1G"
+        /* format_degraded = "MEMORY < %available" */
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M"
+}
