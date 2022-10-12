@@ -1,24 +1,36 @@
-function bottomp
-  printf '\n.0s' (seq 1..100)
-end
+# function bp
+#   printf '\n.0s' (seq -f 100)
+# end
 
-if status is_interactive
-  bottomp
-end
+# if status is_interactive
+  #bp
+# end
+
+set fish_greeting
 
 # =============== Config Aliases ===============
 alias fishc="nvim ~/.config/fish/config.fish" 
 alias i3c="nvim ~/.config/i3/config"
+alias .='cd ~/.legendary-guacamole'
+
+
+# =============== Xbps Aliases ===============
+alias xi='sudo xbps-install -S'
+alias xr='sudo xbps-remove -R'
 
 # =============== Other Aliases ===============
-alias lres="xrandr -s 1368x768"
-alias hres="xrandr -s 1920x1080"
+alias lg='ll | rg' # 'list-grep'
+alias start_wpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
 alias em="emacsclient -c -a 'nvim'"
-alias clear="clear && bottomp" 
-alias cl="clear && bottomp" 
-alias key-ro="setxkbmap -layout ro"
-alias key-us="setxkbmap -layout us"
+alias cdl='cd && clear'
+alias cl="clear" 
+alias neo='neofetch'
+# alias clear="clear && bp" 
 alias shitless="inxi -CDGISmzy 130 -c 10"
+# alias lres="xrandr -s 1368x768"
+# alias hres="xrandr -s 1920x1080"
+# alias key-ro="setxkbmap -layout ro"
+# alias key-us="setxkbmap -layout us"
 # alias vt="~/dev/c/vim-train/vt"
 # alias unic="~/dev/c/unic/unic"
 # alias tlauncher="java -jar ~/TLauncher/TLauncher-2.841.jar"
