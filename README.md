@@ -1,11 +1,11 @@
 # legendary-guacamole
 My Linux .dotfiles
 
-**OS**: Void Linux
-**Shell**: fish, oh-my-fish
-**WM**: i3wm, i3bar, i3status, dmenu
-**Terminal**: Simple Terminal (st)
-**Text Editors**: DOOM Emacs, Neovim
+- **OS**: Void Linux
+- **Shell**: fish, oh-my-fish
+- **WM**: i3wm, i3bar, i3status, dmenu
+- **Terminal**: Simple Terminal (st)
+- **Text Editors**: DOOM Emacs, Neovim
 
 ## New Install
 - i3 along with i3status
