@@ -1,43 +1,28 @@
 # legendary-guacamole
 My Linux .dotfiles
 
+**OS**: Void Linux
+**Shell**: fish, oh-my-fish
+**WM**: i3wm, i3bar, i3status, dmenu
+**Terminal**: Simple Terminal (st)
+**Text Editors**: DOOM Emacs, Neovim
+
 ## New Install
 - i3 along with i3status
 - simple terminal (st)
 - fish shell
-- Astronvim
+- Neovim
 - DOOM Emacs
 - Dillo
-- Brave
+- Firefox/any fork
 - yt-dlp
-- ranger
+- fff
 - qbittorrent
 - mpv
 - blender
 - cmus
-- flameshot/sharex
-- keepasxc
-
-### Optional
-- asciinema
-
-## Home layout
-```
-dev/
-docs/:
-  org/
-  brain/
-downloads/
-media/:
-  music/
-  movies/
-  videos/
-  pics/
-  wallpapers/
-arch/:
-  websites/
-```
-For anything that is public-domain, create a subdirectory called public_domain/
+- flameshot
+- keepassxc
 
 ## Naming Conv
 Exeptions are 'dev/'
