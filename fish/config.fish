@@ -14,6 +14,11 @@ alias xr='sudo xbps-remove'
 alias xrr='sudo xbps-remove -R'
 alias xoo='sudo xbps-remove -Oo'
 
+# =============== Git Aliases ===============
+alias gs='git status -s'
+alias ga='git add'
+alias gc='git commit -m'
+
 # =============== Other Aliases ===============
 alias lg='ll | rg' # 'list-grep'
 alias swpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
