@@ -4,11 +4,10 @@ My Linux .dotfiles
 - **OS**: Void Linux
 - **Shell**: fish, oh-my-fish
 - **WM**: monsterwm, dmenu
-- **Terminal**: Simple Terminal (st)
+- **Terminal**: st
 - **Text Editors**: DOOM Emacs, Neovim
 
 ## Naming Conv
-Exeptions are 'dev/'
 For artwork put the license at the end on the filename
 
 `file_name_2022-10-08_CC0`
