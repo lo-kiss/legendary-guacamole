@@ -3,26 +3,9 @@ My Linux .dotfiles
 
 - **OS**: Void Linux
 - **Shell**: fish, oh-my-fish
-- **WM**: i3wm, i3bar, i3status, dmenu
+- **WM**: monsterwm, dmenu
 - **Terminal**: Simple Terminal (st)
 - **Text Editors**: DOOM Emacs, Neovim
-
-## New Install
-- i3 along with i3status
-- simple terminal (st)
-- fish shell
-- Neovim
-- DOOM Emacs
-- Dillo
-- Firefox/any fork
-- yt-dlp
-- fff
-- qbittorrent
-- mpv
-- blender
-- cmus
-- flameshot
-- keepassxc
 
 ## Naming Conv
 Exeptions are 'dev/'
