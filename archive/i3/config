@@ -1,25 +1,20 @@
 # =============== Theme =============== 
 
 # Set wallpaper
-exec --no-startup-id feh --bg-max ~/wallpapers/zach-hewett-farmhouse.jpg
+exec_always --no-startup-id feh --bg-fill ~/media/wallpapers/public_domain/roman_theater_2022-10-11.jpg
+
+for_window [class="^.*"] border pixel 2
+
+# Hides border when there is only one window in workspace
+hide_edge_borders smart
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
 
-# used for i3-gaps to work
-for_window [class=".*"] border pixel 2 
-
-# Set inner/outer gaps
-gaps inner 10
-gaps outer 2
-
-# Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
-
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+# smart_borders on
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -34,16 +29,14 @@ set $mod Mod4
 floating_modifier $mod
 
 # start dmenu (a program launcher)
-bindsym F1 exec i3-dmenu-desktop
+bindsym F1 exec dmenu_run
 
 # start a terminal
 bindsym $mod+Return exec st
-bindsym $mod+Shift+Return exec st -e ranger
+bindsym $mod+Shift+Return exec st -e fff
 bindsym $mod+Shift+m exec st -e cmus
 
-bindsym $mod+Shift+e exec em
-
-bindsym $mod+Shift+n exec nemo
+bindsym $mod+Shift+e exec emacsclient -c -a 'nvim'
 
 # kill focused window
 bindsym $mod+q kill
@@ -118,11 +111,11 @@ bindsym $mod+Shift+4 move container to workspace number $ws4
 bindsym $mod+Shift+5 move container to workspace number $ws5
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym $mod+equal exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym $mod+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym $mod+0 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# set $refresh_i3status killall -SIGUSR1 i3status
+# bindsym $mod+equal exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+# bindsym $mod+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+# bindsym $mod+0 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -174,7 +167,7 @@ mode "$mode_system" {
     bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $i3lockwall && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Ctrl+s exec --no-startup-id systemctl poweroff -i, mode "default"
+    bindsym Ctrl+s exec --no-startup-id poweroff -i, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -198,7 +191,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 
 # i3 config file (v4)
