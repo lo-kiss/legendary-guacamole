@@ -2,18 +2,21 @@ date
 set fish_greeting
 
 # =============== Config Aliases ===============
-alias fishc="nvim ~/.config/fish/config.fish" 
-alias i3c="nvim ~/.config/i3/config"
+alias fishc="nvim ~/.config/fish/config.fish"
+alias mc='nvim ~/.monsterwm/config.h'
 alias .='cd ~/.legendary-guacamole && ll'
+# alias i3c="nvim ~/.config/i3/config"
 
 # =============== Xbps Aliases ===============
 alias xi='sudo xbps-install -S'
 alias xu='sudo xbps-install -Su'
-alias xr='sudo xbps-remove -R'
+alias xr='sudo xbps-remove'
+alias xrr='sudo xbps-remove -R'
+alias xoo='sudo xbps-remove -Oo'
 
 # =============== Other Aliases ===============
 alias lg='ll | rg' # 'list-grep'
-alias start_wpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
+alias swpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
 alias em="emacsclient -c -a 'nvim'"
 alias cll='clear && ll'
 alias cdl='cd && clear'
