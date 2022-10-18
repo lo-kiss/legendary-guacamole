@@ -1,4 +1,4 @@
-date
+date "+%y-%m-%d %H:%M %a"
 set fish_greeting
 
 # =============== Config Aliases ===============
@@ -21,6 +21,7 @@ alias gc='git commit -m'
 
 # =============== Other Aliases ===============
 alias lg='ll | rg' # 'list-grep'
+alias sx='startx'
 alias swpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
 alias em="emacsclient -c -a 'nvim'"
 alias cll='clear && ll'
