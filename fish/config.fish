@@ -1,10 +1,15 @@
-date "+%y-%m-%d %H:%M %a"
 set fish_greeting
+echo "┌───┐   ┌───────┬───┬───┬──┐
+│   └───┤   ─   │       ┤  │
+└───────┴───────┴───┴───┴──┘"
+date "+%y-%m-%d %H:%M %a"
 
 # =============== Config Aliases ===============
 alias fishc="nvim ~/.config/fish/config.fish"
 alias mc='nvim ~/.monsterwm/config.h'
 alias .='cd ~/.legendary-guacamole && ll'
+alias src='source ~/.config/fish/config.fish'
+alias srcl='clear &&source ~/.config/fish/config.fish'
 # alias i3c="nvim ~/.config/i3/config"
 
 # =============== Xbps Aliases ===============
