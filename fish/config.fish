@@ -23,6 +23,7 @@ alias xoo='sudo xbps-remove -Oo'
 alias gs='git status -s'
 alias ga='git add'
 alias gc='git commit -m'
+alias gp='git push'
 
 # =============== Other Aliases ===============
 alias blt='cd ~/dev/web/bloated_website_2022-10-13/ && ll'
