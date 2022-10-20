@@ -25,6 +25,7 @@ alias ga='git add'
 alias gc='git commit -m'
 
 # =============== Other Aliases ===============
+alias blt='cd ~/dev/web/bloated_website_2022-10-13/ && ll'
 alias lg='ll | rg' # 'list-grep'
 alias sx='startx'
 alias swpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
