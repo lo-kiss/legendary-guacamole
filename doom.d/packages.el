@@ -51,3 +51,4 @@
 
 (package! key-chord)
 (package! almost-mono-themes)
+(package! poet-theme)
