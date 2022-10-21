@@ -26,6 +26,7 @@ alias gc='git commit -m'
 alias gp='git push'
 
 # =============== Other Aliases ===============
+alias uni='cd ~/docs/brain/universe/ && ll'
 alias blt='cd ~/dev/web/bloated_website_2022-10-13/ && ll'
 alias lg='ll | rg' # 'list-grep'
 alias sx='startx'
