@@ -5,11 +5,10 @@ echo "┌───┐   ┌───────┬───┬───┬─�
 date "+%y-%m-%d %H:%M %a"
 
 # =============== Config Aliases ===============
-alias fishc="nvim ~/.config/fish/config.fish"
-alias mc='cd ~/.monsterwm && nvim config.h'
-alias .='cd ~/.legendary-guacamole && ll'
+alias fishc="cd ~/.legendary-guacamole/fish/ && nvim config.fish"
+alias mc='cd ~/.legendary-guacamole/monsterwm && nvim config.h'
+alias .='cd ~/.legendary-guacamole && ll && git status -s'
 alias src='source ~/.config/fish/config.fish'
-alias srcl='clear &&source ~/.config/fish/config.fish'
 # alias i3c="nvim ~/.config/i3/config"
 
 # =============== Xbps Aliases ===============
