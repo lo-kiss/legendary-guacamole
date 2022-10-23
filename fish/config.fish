@@ -6,7 +6,7 @@ date "+%y-%m-%d %H:%M %a"
 
 # =============== Config Aliases ===============
 alias fishc="nvim ~/.config/fish/config.fish"
-alias mc='nvim ~/.monsterwm/config.h'
+alias mc='cd ~/.monsterwm && nvim config.h'
 alias .='cd ~/.legendary-guacamole && ll'
 alias src='source ~/.config/fish/config.fish'
 alias srcl='clear &&source ~/.config/fish/config.fish'
