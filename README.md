@@ -1,7 +1,7 @@
 # legendary-guacamole
 My Linux .dotfiles
 
-- **OS**: Void Linux
+- **OS**: Bedrock Linux (+ Void)
 - **Shell**: fish, oh-my-fish
 - **WM**: monsterwm, dmenu
 - **Terminal**: st
