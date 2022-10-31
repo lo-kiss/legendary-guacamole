@@ -23,6 +23,8 @@ alias gs='git status -s'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
+alias gm='git merge'
+alias gco='git checkout'
 
 # =============== Other Aliases ===============
 alias sudo='doas'
