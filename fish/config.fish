@@ -7,7 +7,7 @@ date "+%y-%m-%d %H:%M %a"
 # =============== Config Aliases ===============
 alias fishc="cd ~/.legendary-guacamole/fish/ && nvim config.fish"
 alias mc='cd ~/.legendary-guacamole/monsterwm && nvim config.h'
-alias .='cd ~/.legendary-guacamole && ll && git status -s'
+alias .f='cd ~/.legendary-guacamole && ll && git status -s'
 alias src='source ~/.config/fish/config.fish'
 # alias i3c="nvim ~/.config/i3/config"
 
@@ -23,6 +23,7 @@ alias gs='git status -s'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
+alias gb='git branch'
 alias gm='git merge'
 alias gco='git checkout'
 

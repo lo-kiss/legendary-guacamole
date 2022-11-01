@@ -1,0 +1,16 @@
+#! /bin/bash
+# Strict mode
+set -euo pipefail
+IFS=$'\n\t'
+
+# New project
+if [ "$1" = "c" ]; then
+	mkdir ~/dev/$2
+	echo -e "int main(void)\n{\nreturn 0;\n}" > ~/dev/$2/main.c
+	echo "Created new C project in $(find ~/dev/$2 -type d)"
+
+elif [ "$1" = "web" ]; then
+	mkdir ~/dev/web/$2
+	touch ~/dev/web/$2/index.html ~/dev/web/$2/style.css
+	echo "Created new Web project in $(find ~/dev/web/$2 -type d)"
+fi
