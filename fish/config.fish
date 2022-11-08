@@ -3,10 +3,11 @@ echo "┌───┐   ┌───────┬───┬───┬─�
 │   └───┤   ─   │       ┤  │
 └───────┴───────┴───┴───┴──┘"
 date "+%y-%m-%d %H:%M %a"
+cal
 
 # =============== Config Aliases ===============
 alias fishc="cd ~/.legendary-guacamole/fish/ && nvim config.fish"
-alias mc='cd ~/.legendary-guacamole/monsterwm && nvim config.h'
+alias mc='cd ~/.monsterwm && nvim config.h'
 alias .f='cd ~/.legendary-guacamole && ll && git status -s'
 alias src='source ~/.config/fish/config.fish'
 # alias i3c="nvim ~/.config/i3/config"
@@ -29,17 +30,17 @@ alias gco='git checkout'
 
 # =============== Other Aliases ===============
 alias sudo='doas'
+alias sc="scrot -s ~/media/ss/'%Y-%m-%d_%H-%M.png'"
 alias cwd='pwd | xclip -selection clipboard'
 alias uni='cd ~/docs/brain/universe/ && ll'
-alias blt='cd ~/dev/web/bloated_website_2022-10-13/ && ll'
-alias lg='ll | rg' # 'list-grep'
-alias sx='startx'
+alias sx='swpa && startx'
 alias swpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
 alias em="emacsclient -c -a 'nvim'"
 alias cll='clear && ll'
 alias cdl='cd && clear'
-alias cl="clear" 
+alias cl="clear"
 alias neo='neofetch'
+alias msc="yt-dlp -x --audio-quality 0 --embed-metadata"
 # alias lres="xrandr -s 1368x768"
 # alias hres="xrandr -s 1920x1080"
 # alias key-ro="setxkbmap -layout ro"
@@ -47,5 +48,4 @@ alias neo='neofetch'
 # alias tlauncher="java -jar ~/TLauncher/TLauncher-2.841.jar"
 # alias rednight="redshift -b 0.5 -l manual:lat=44.426765:lon=26.102537 &"
 # alias redquit="redshift -x && pkill redshift"
-# alias yt-music="yt-dlp -x --audio-quality 0 --embed-metadata --embed-thumbnail -P ~/music/"
 # alias yt-vid="yt-dlp -P ~/videos/youtube/"

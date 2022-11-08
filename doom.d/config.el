@@ -26,12 +26,14 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default: `doom-one'
-;; Some themes I like: `doom-1337', `doom-vibrant', `almost-mono-black'
-(setq doom-theme 'doom-1337)
+;; Some themes I like: `doom-1337', `doom-vibrant', `almost-mono-black', `doom-monokai-spectrum'
+(setq doom-theme 'doom-monokai-spectrum)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
+
+(setq doom-modeline-enable-word-count t)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -69,6 +71,8 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(setq doom-modeline-lsp t)
 
 ;; Exit insert mode by pressing j and then j quickly
 (setq key-chord-two-keys-delay 0.5)

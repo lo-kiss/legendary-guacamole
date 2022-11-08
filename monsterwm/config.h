@@ -43,8 +43,8 @@ static const AppRule rules[] = { \
  * custom commands
  * must always end with ', NULL };'
  */
-static const char *termcmd[] = { "st",     NULL };
-static const char *menucmd[] = { "dmenu_run", NULL };
+static const char *termcmd[] = { "st", NULL };
+static const char *menucmd[] = { "dmenu_run", "-b", NULL };
 static const char *emacs[] = { "emacsclient", "-c", "-a 'nvim'", NULL };
 
 #define DESKTOPCHANGE(K,N) \
@@ -56,9 +56,9 @@ static const char *emacs[] = { "emacsclient", "-c", "-a 'nvim'", NULL };
  */
 static Key keys[] = {
     /* modifier          key            function           argument */
-    {  MOD1,             XK_b,          togglepanel,       {NULL}},
+    {  MOD4,             XK_b,          togglepanel,       {NULL}},
     {  MOD1,             XK_BackSpace,  focusurgent,       {NULL}},
-    {  MOD1|SHIFT,       XK_c,          killclient,        {NULL}},
+    {  MOD1,             XK_c,          killclient,        {NULL}},
     {  MOD1,             XK_j,          next_win,          {NULL}},
     {  MOD1,             XK_k,          prev_win,          {NULL}},
     {  MOD1,             XK_h,          resize_master,     {.i = -40}}, /* decrease size in px */
@@ -73,11 +73,11 @@ static Key keys[] = {
     {  MOD1,             XK_Return,     swap_master,       {NULL}},
     {  MOD1|SHIFT,       XK_j,          move_down,         {NULL}},
     {  MOD1|SHIFT,       XK_k,          move_up,           {NULL}},
-    {  MOD1|SHIFT,       XK_t,          switch_mode,       {.i = TILE}},
-    {  MOD1|SHIFT,       XK_m,          switch_mode,       {.i = MONOCLE}},
-    {  MOD1|SHIFT,       XK_b,          switch_mode,       {.i = BSTACK}},
-    {  MOD1|SHIFT,       XK_g,          switch_mode,       {.i = GRID}},
-    {  MOD1|SHIFT,       XK_f,          switch_mode,       {.i = FLOAT}},
+    {  MOD1,             XK_t,          switch_mode,       {.i = TILE}},
+    {  MOD1,             XK_m,          switch_mode,       {.i = MONOCLE}},
+    {  MOD1,             XK_b,          switch_mode,       {.i = BSTACK}},
+    {  MOD1,             XK_g,          switch_mode,       {.i = GRID}},
+    {  MOD1,             XK_f,          switch_mode,       {.i = FLOAT}},
     {  MOD1|CONTROL,     XK_r,          quit,              {.i = 0}}, /* quit with exit value 0 */
     {  MOD1|CONTROL,     XK_q,          quit,              {.i = 1}}, /* quit with exit value 1 */
     {  MOD4,             XK_Return,     spawn,             {.com = termcmd}},
