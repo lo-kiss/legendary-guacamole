@@ -5,6 +5,13 @@ echo "┌───┐   ┌───────┬───┬───┬─�
 date "+%y-%m-%d %H:%M %a"
 cal
 
+# CD on exit in fff (file manager)
+function f
+	fff $argv
+	set -q XDG_CACHE_HOME; or set XDG_CACHE_HOME $HOME/.cache
+	cd (cat $XDG_CACHE_HOME/fff/.fff_d)
+end
+
 # =============== Config Aliases ===============
 alias fishc="cd ~/.legendary-guacamole/fish/ && nvim config.fish"
 alias mc='cd ~/.monsterwm && nvim config.h'
@@ -18,6 +25,7 @@ alias xu='sudo xbps-install -Su'
 alias xr='sudo xbps-remove'
 alias xrr='sudo xbps-remove -R'
 alias xoo='sudo xbps-remove -Oo'
+alias xq='xbps-query -Rs'
 
 # =============== Git Aliases ===============
 alias gs='git status -s'
@@ -29,6 +37,7 @@ alias gm='git merge'
 alias gco='git checkout'
 
 # =============== Other Aliases ===============
+alias untar='tar -xvf'
 alias sudo='doas'
 alias sc="scrot -s ~/media/ss/'%Y-%m-%d_%H-%M.png'"
 alias cwd='pwd | xclip -selection clipboard'
