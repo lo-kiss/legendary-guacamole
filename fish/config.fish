@@ -1,9 +1,17 @@
-set fish_greeting
-echo "┌───┐   ┌───────┬───┬───┬──┐
-│   └───┤   ─   │       ┤  │
-└───────┴───────┴───┴───┴──┘"
-date "+%y-%m-%d %H:%M %a"
-cal
+function fish_greeting
+	echo -n "LOKI " 
+	date "+%y-%m-%d %H:%M %a"
+end
+
+function fish_prompt
+	set_color -b ff7800; set_color black
+	echo '' (prompt_pwd) (date '+%H:%M')
+	set_color normal
+end
+
+function fish_right_prompt
+	set_color -d; echo cope 
+end
 
 # CD on exit in fff (file manager)
 function f
@@ -37,6 +45,7 @@ alias gm='git merge'
 alias gco='git checkout'
 
 # =============== Other Aliases ===============
+alias po='sudo poweroff'
 alias untar='tar -xvf'
 alias sudo='doas'
 alias sc="scrot -s ~/media/ss/'%Y-%m-%d_%H-%M.png'"
@@ -50,11 +59,12 @@ alias cdl='cd && clear'
 alias cl="clear"
 alias neo='neofetch'
 alias msc="yt-dlp -x --audio-quality 0 --embed-metadata"
-# alias lres="xrandr -s 1368x768"
-# alias hres="xrandr -s 1920x1080"
-# alias key-ro="setxkbmap -layout ro"
-# alias key-us="setxkbmap -layout us"
-# alias tlauncher="java -jar ~/TLauncher/TLauncher-2.841.jar"
-# alias rednight="redshift -b 0.5 -l manual:lat=44.426765:lon=26.102537 &"
+# alias x2="xrandr -s 1368x768"
+# alias x1="xrandr -s 1920x1080"
+# alias ro="setxkbmap -layout ro"
+# alias us="setxkbmap -layout us"
 # alias redquit="redshift -x && pkill redshift"
-# alias yt-vid="yt-dlp -P ~/videos/youtube/"
+
+# echo "┌───┐   ┌───────┬───┬───┬──┐
+# │   └───┤   ─   │       ┤  │
+# └───────┴───────┴───┴───┴──┘"
