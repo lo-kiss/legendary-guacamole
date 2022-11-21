@@ -1,5 +1,5 @@
 function fish_greeting
-	echo -n "LOKI " 
+	echo -n "$USER/$hostname "
 	date "+%y-%m-%d %H:%M %a"
 end
 
@@ -7,6 +7,7 @@ function fish_prompt
 	set_color -b ff7800; set_color black
 	echo '' (prompt_pwd) (date '+%H:%M')
 	set_color normal
+	echo " "
 end
 
 function fish_right_prompt
