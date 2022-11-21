@@ -3,15 +3,32 @@ function fish_greeting
 	date "+%y-%m-%d %H:%M %a"
 end
 
+set -g __fish_git_prompt_show_informative_status 1
+set -g __fish_git_prompt_show_untrackedfiles 1
+set -g __fish_git_prompt_showupstream "informative"
+
+set -g __fish_git_prompt_char_stateseparator ' '
+set -g __fish_git_prompt_char_upstream_ahead " ⌃"
+set -g __fish_git_prompt_char_upstream_behind " ⌄"
+set -g __fish_git_prompt_char_upstream_prefix ""
+set -g __fish_git_prompt_char_upstream_diverged '⎞ '
+
+set -g __fish_git_prompt_char_stagedstate "="
+set -g __fish_git_prompt_char_dirtystate "+"
+set -g __fish_git_prompt_char_untrackedfiles "_"
+set -g __fish_git_prompt_char_conflictedstate "x"
+set -g __fish_git_prompt_char_cleanstate ""
+
 function fish_prompt
 	set_color -b ff7800; set_color black
-	echo '' (prompt_pwd) (date '+%H:%M')
+	# echo '' (prompt_pwd) (fish_git_prompt) 
+	printf "%s" (prompt_pwd) (fish_git_prompt) \n
 	set_color normal
 	echo " "
 end
 
 function fish_right_prompt
-	set_color -d; echo cope 
+	set_color -d; echo (date '+%H:%M'); set_color normal 
 end
 
 # CD on exit in fff (file manager)
