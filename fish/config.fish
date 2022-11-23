@@ -39,9 +39,9 @@ function f
 end
 
 # =============== Config Aliases ===============
-alias fishc="cd ~/.legendary-guacamole/fish/ && nvim config.fish"
+alias fishc="cd ~/.df/fish/ && nvim config.fish"
 alias mc='cd ~/.monsterwm && nvim config.h'
-alias .f='cd ~/.legendary-guacamole && ll && git status -s'
+alias .f='cd ~/.df && ll && git status -s'
 alias src='source ~/.config/fish/config.fish'
 # alias i3c="nvim ~/.config/i3/config"
 
