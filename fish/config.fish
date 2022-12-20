@@ -3,28 +3,10 @@ function fish_greeting
 	date "+%y-%m-%d %H:%M %a"
 end
 
-set -g __fish_git_prompt_show_informative_status 1
-set -g __fish_git_prompt_show_untrackedfiles 1
-set -g __fish_git_prompt_showupstream "informative"
-
-set -g __fish_git_prompt_char_stateseparator ' '
-set -g __fish_git_prompt_char_upstream_ahead " ⌃"
-set -g __fish_git_prompt_char_upstream_behind " ⌄"
-set -g __fish_git_prompt_char_upstream_prefix ""
-set -g __fish_git_prompt_char_upstream_diverged '⎞ '
-
-set -g __fish_git_prompt_char_stagedstate "="
-set -g __fish_git_prompt_char_dirtystate "+"
-set -g __fish_git_prompt_char_untrackedfiles "_"
-set -g __fish_git_prompt_char_conflictedstate "x"
-set -g __fish_git_prompt_char_cleanstate ""
-
 function fish_prompt
-	set_color -b ff7800; set_color black
-	# echo '' (prompt_pwd) (fish_git_prompt) 
+	set_color d23d3d
 	printf "%s" (prompt_pwd) (fish_git_prompt) \n
 	set_color normal
-	echo " "
 end
 
 function fish_right_prompt
@@ -39,18 +21,17 @@ function f
 end
 
 # =============== Config Aliases ===============
-alias fishc="cd ~/.df/fish/ && nvim config.fish"
+alias fc="cd ~/.df/ && nvim fish/config.fish"
 alias mc='cd ~/.monsterwm && nvim config.h'
 alias .f='cd ~/.df && ll && git status -s'
 alias src='source ~/.config/fish/config.fish'
-# alias i3c="nvim ~/.config/i3/config"
 
 # =============== Xbps Aliases ===============
 alias xi='sudo xbps-install -S'
 alias xu='sudo xbps-install -Su'
 alias xr='sudo xbps-remove'
-alias xrr='sudo xbps-remove -R'
-alias xoo='sudo xbps-remove -Oo'
+alias xrr='sudo xbps-remove -R' # remove with dependecies
+alias xoo='sudo xbps-remove -Oo' # clean unwanted packages
 alias xq='xbps-query -Rs'
 
 # =============== Git Aliases ===============
