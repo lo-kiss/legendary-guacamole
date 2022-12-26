@@ -4,8 +4,10 @@ My Linux .dotfiles
 - **Shell**: fish
 - **WM**: monsterwm, dmenu
 - **Terminal**: st
+- **Theme**: hund from terminal.sexy
 - **Text Editors**: DOOM Emacs, Neovim
-- **Font**: Tamzen 
+- **Font**: Tamzen
 
-![image](https://user-images.githubusercontent.com/115636509/198839223-108ed50d-e0c8-4858-af7d-b4ff8596887c.png)
+![2022-12-26_11-25](https://user-images.githubusercontent.com/115636509/209531610-e77b4b8c-7627-4000-97cd-a070140f83f4.png)
+
 
