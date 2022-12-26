@@ -44,12 +44,12 @@ alias gm='git merge'
 alias gco='git checkout'
 
 # =============== Other Aliases ===============
+alias n='nvim'
 alias po='sudo poweroff'
 alias untar='tar -xvf'
 alias sudo='doas'
 alias sc="scrot -s ~/media/ss/'%Y-%m-%d_%H-%M.png'"
 alias cwd='pwd | xclip -selection clipboard'
-alias uni='cd ~/docs/brain/universe/ && ll'
 alias sx='swpa && startx'
 alias swpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
 alias em="emacsclient -c -a 'nvim'"
@@ -62,7 +62,6 @@ alias msc="yt-dlp -x --audio-quality 0 --embed-metadata"
 # alias x1="xrandr -s 1920x1080"
 # alias ro="setxkbmap -layout ro"
 # alias us="setxkbmap -layout us"
-# alias redquit="redshift -x && pkill redshift"
 
 # echo "┌───┐   ┌───────┬───┬───┬──┐
 # │   └───┤   ─   │       ┤  │

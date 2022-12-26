@@ -1,3 +1,14 @@
+-- CONFIG 
+local set = vim.opt
+
+set.tabstop = 4
+set.shiftwidth = 0
+set.expandtab = true
+
+
+
+
+
 -- STATUS LINE
 local fn = vim.fn
 local api = vim.api
