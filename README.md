@@ -8,6 +8,4 @@ My Linux .dotfiles
 - **Text Editors**: DOOM Emacs, Neovim
 - **Font**: Tamzen
 
-![2022-12-26_11-25](https://user-images.githubusercontent.com/115636509/209531610-e77b4b8c-7627-4000-97cd-a070140f83f4.png)
-
-
+![2023-01-19_19-54](https://user-images.githubusercontent.com/115636509/213522581-52593197-dd1e-4bc7-bfd5-27472f053c21.png)
