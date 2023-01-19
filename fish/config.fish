@@ -21,8 +21,9 @@ function f
 end
 
 # =============== Config Aliases ===============
-alias fc="cd ~/.df/ && nvim fish/config.fish"
-alias mc='cd ~/.monsterwm && nvim config.h'
+alias fc="cd ~/.df/ && vis fish/config.fish"
+alias mc='cd ~/.monsterwm && vis config.h'
+alias vc="cd ~/.config/vis/ && vis visrc.lua"
 alias .f='cd ~/.df && ll && git status -s'
 alias src='source ~/.config/fish/config.fish'
 
@@ -44,7 +45,7 @@ alias gm='git merge'
 alias gco='git checkout'
 
 # =============== Other Aliases ===============
-alias n='nvim'
+alias v='vis'
 alias po='sudo poweroff'
 alias untar='tar -xvf'
 alias sudo='doas'
@@ -58,8 +59,8 @@ alias cdl='cd && clear'
 alias cl="clear"
 alias neo='neofetch'
 alias msc="yt-dlp -x --audio-quality 0 --embed-metadata"
-# alias x2="xrandr -s 1368x768"
-# alias x1="xrandr -s 1920x1080"
+alias x2="xrandr -s 1368x768"
+alias x1="xrandr -s 1920x1080"
 # alias ro="setxkbmap -layout ro"
 # alias us="setxkbmap -layout us"
 

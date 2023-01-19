@@ -14,14 +14,14 @@
 #define SHOW_PANEL      False      /* show panel by default on exec */
 #define TOP_PANEL       False      /* False means panel is on bottom */
 #define PANEL_HEIGHT    18        /* 0 for no space for panel, thus no panel */
-#define DEFAULT_MODE    BSTACK    /* initial layout/mode: TILE MONOCLE BSTACK GRID FLOAT */
+#define DEFAULT_MODE    TILE    /* initial layout/mode: TILE MONOCLE BSTACK GRID FLOAT */
 #define ATTACH_ASIDE    True      /* False means new window is master */
 #define FOLLOW_WINDOW   False     /* follow the window when moved to a different desktop */
 #define FOLLOW_MOUSE    True      /* focus the window the mouse just entered */
 #define CLICK_TO_FOCUS  True      /* focus an unfocused window when clicked  */
 #define FOCUS_BUTTON    Button1   /* mouse button to be used along with CLICK_TO_FOCUS */
 #define BORDER_WIDTH    2         /* window border width */
-#define FOCUS           "#ff950e" /* focused window border color    */
+#define FOCUS           "#66aabb" /* focused window border color    */
 #define UNFOCUS         "#444444" /* unfocused window border color  */
 #define MINWSZ          50        /* minimum window size in pixels  */
 #define DEFAULT_DESKTOP 0         /* the desktop to focus initially */
@@ -44,8 +44,16 @@ static const AppRule rules[] = { \
  * must always end with ', NULL };'
  */
 static const char *termcmd[] = { "st", NULL };
-static const char *menucmd[] = { "dmenu_run", "-b", NULL };
-static const char *emacs[] = { "emacsclient", "-c", "-a 'nvim'", NULL };
+static const char *menucmd[] = { "dmenu_run", "-b", 
+								"-l", "25",
+								"-nb", "#161616",
+								"-sb", "#222222",
+								"-p", "computer activate",
+								"-fn", "tamzen-20",
+								NULL };
+static const char *alsamixer[] = { "st", "-e", "alsamixer", NULL};
+static const char *fm[] = { "st", "-e", "fff", NULL}; /* File manager */
+/* static const char *emacs[] = { "emacsclient", "-c", "-a 'nvim'", NULL }; */
 
 #define DESKTOPCHANGE(K,N) \
     {  MOD1,             K,              change_desktop, {.i = N}}, \
@@ -63,8 +71,8 @@ static Key keys[] = {
     {  MOD1,             XK_k,          prev_win,          {NULL}},
     {  MOD1,             XK_h,          resize_master,     {.i = -40}}, /* decrease size in px */
     {  MOD1,             XK_l,          resize_master,     {.i = +40}}, /* increase size in px */
-    {  MOD1,             XK_o,          resize_stack,      {.i = -10}}, /* shrink   size in px */
-    {  MOD1,             XK_p,          resize_stack,      {.i = +10}}, /* grow     size in px */
+    {  MOD1,             XK_o,          resize_stack,      {.i = -40}}, /* shrink   size in px */
+    {  MOD1,             XK_p,          resize_stack,      {.i = +40}}, /* grow     size in px */
     {  MOD1|CONTROL,     XK_h,          rotate,            {.i = -1}},
     {  MOD1|CONTROL,     XK_l,          rotate,            {.i = +1}},
     {  MOD1|SHIFT,       XK_h,          rotate_filled,     {.i = -1}},
@@ -82,7 +90,9 @@ static Key keys[] = {
     {  MOD1|CONTROL,     XK_q,          quit,              {.i = 1}}, /* quit with exit value 1 */
     {  MOD4,             XK_Return,     spawn,             {.com = termcmd}},
     {  MOD4,             XK_v,          spawn,             {.com = menucmd}},
-    {  MOD4,             XK_e,          spawn,             {.com = emacs}},
+    {  MOD4,             XK_a,          spawn,             {.com = alsamixer}},
+    {  MOD4,             XK_f,          spawn,             {.com = fm}},
+    /* {  MOD4,             XK_e,          spawn,             {.com = emacs}}, */
     {  MOD4,             XK_j,          moveresize,        {.v = (int []){   0,  25,   0,   0 }}}, /* move down  */
     {  MOD4,             XK_k,          moveresize,        {.v = (int []){   0, -25,   0,   0 }}}, /* move up    */
     {  MOD4,             XK_l,          moveresize,        {.v = (int []){  25,   0,   0,   0 }}}, /* move right */

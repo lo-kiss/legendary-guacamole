@@ -1,9 +1,14 @@
 -- CONFIG 
 local set = vim.opt
 
+set.textwidth = 80
 set.tabstop = 4
 set.shiftwidth = 0
 set.expandtab = true
+
+set.relativenumber = true
+set.scrolloff = 5 -- The number of screen lines to keep above and below the cursor.
+set.autoread = true
 
 
 
