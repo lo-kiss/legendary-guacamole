@@ -1,12 +1,22 @@
 function fish_greeting
-	echo -n "$USER/$hostname "
-	date "+%y-%m-%d %H:%M %a"
+	# set_color 80a0ff
+    # cat ~/fish_art
+    # printf "nunununununununununununununununununununununununununununununun \n"
+	# set_color normal
+
+	echo " "
+	echo -n "== $USER/$hostname - "
+	date "+%y/%m/%d %H:%M %a"
+	set_color 808080
+	hr
+	set_color normal
 end
 
 function fish_prompt
-	set_color d23d3d
+	set_color ff5189
 	printf "%s" (prompt_pwd) (fish_git_prompt) \n
 	set_color normal
+	printf " >= "
 end
 
 function fish_right_prompt
@@ -40,11 +50,22 @@ alias gs='git status -s'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
+alias gpull='git pull'
 alias gb='git branch'
 alias gm='git merge'
 alias gco='git checkout'
 
 # =============== Other Aliases ===============
+function lite
+	lite-xl $argv &
+end
+
+function cdll
+	cd $argv && ls -lah
+end
+
+alias yt="ytfzf"
+alias py='python'
 alias v='vis'
 alias po='sudo poweroff'
 alias untar='tar -xvf'
@@ -53,14 +74,14 @@ alias sc="scrot -s ~/media/ss/'%Y-%m-%d_%H-%M.png'"
 alias cwd='pwd | xclip -selection clipboard'
 alias sx='swpa && startx'
 alias swpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
-alias em="emacsclient -c -a 'nvim'"
 alias cll='clear && ll'
 alias cdl='cd && clear'
 alias cl="clear"
 alias neo='neofetch'
 alias msc="yt-dlp -x --audio-quality 0 --embed-metadata"
-alias x2="xrandr -s 1368x768"
-alias x1="xrandr -s 1920x1080"
+alias res2="xrandr -s 1368x768"
+alias res1="xrandr -s 1920x1080"
+# alias em="emacsclient -c -a 'nvim'"
 # alias ro="setxkbmap -layout ro"
 # alias us="setxkbmap -layout us"
 

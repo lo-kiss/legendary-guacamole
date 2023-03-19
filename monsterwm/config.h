@@ -8,7 +8,6 @@
 #define MOD4            Mod4Mask    /* Super/Windows key */
 #define CONTROL         ControlMask /* Control key */
 #define SHIFT           ShiftMask   /* Shift key */
-
 /** generic settings **/
 #define MASTER_SIZE     0.52
 #define SHOW_PANEL      False      /* show panel by default on exec */
@@ -20,7 +19,7 @@
 #define FOLLOW_MOUSE    True      /* focus the window the mouse just entered */
 #define CLICK_TO_FOCUS  True      /* focus an unfocused window when clicked  */
 #define FOCUS_BUTTON    Button1   /* mouse button to be used along with CLICK_TO_FOCUS */
-#define BORDER_WIDTH    2         /* window border width */
+#define BORDER_WIDTH    1         /* window border width */
 #define FOCUS           "#66aabb" /* focused window border color    */
 #define UNFOCUS         "#444444" /* unfocused window border color  */
 #define MINWSZ          50        /* minimum window size in pixels  */
@@ -44,15 +43,16 @@ static const AppRule rules[] = { \
  * must always end with ', NULL };'
  */
 static const char *termcmd[] = { "st", NULL };
+static const char *alsamixer[] = { "st", "-e", "alsamixer", NULL};
+static const char *quteb[] = { "qutebrowser", NULL};
+static const char *fm[] = { "st", "-e", "fff", NULL}; /* File manager */
+static const char *ytfzf[] = { "st", "-e", "ytfzf", "-l", "-s", NULL}; /* File manager */
 static const char *menucmd[] = { "dmenu_run", "-b", 
-								"-l", "25",
 								"-nb", "#161616",
 								"-sb", "#222222",
+								"-fn", "FiraCode",
 								"-p", "computer activate",
-								"-fn", "tamzen-20",
 								NULL };
-static const char *alsamixer[] = { "st", "-e", "alsamixer", NULL};
-static const char *fm[] = { "st", "-e", "fff", NULL}; /* File manager */
 /* static const char *emacs[] = { "emacsclient", "-c", "-a 'nvim'", NULL }; */
 
 #define DESKTOPCHANGE(K,N) \
@@ -91,6 +91,8 @@ static Key keys[] = {
     {  MOD4,             XK_Return,     spawn,             {.com = termcmd}},
     {  MOD4,             XK_v,          spawn,             {.com = menucmd}},
     {  MOD4,             XK_a,          spawn,             {.com = alsamixer}},
+    {  MOD4,             XK_q,          spawn,             {.com = quteb}},
+    {  MOD4,             XK_y,          spawn,             {.com = ytfzf}},
     {  MOD4,             XK_f,          spawn,             {.com = fm}},
     /* {  MOD4,             XK_e,          spawn,             {.com = emacs}}, */
     {  MOD4,             XK_j,          moveresize,        {.v = (int []){   0,  25,   0,   0 }}}, /* move down  */

@@ -10,32 +10,42 @@ local style = require "core.style"
 ------------------------------ Themes ----------------------------------------
 
 -- some themes I like:
-core.reload_module("colors.onedark")
+-- core.reload_module("colors.onedark")
 -- core.reload_module("colors.monokai")
 -- core.reload_module("colors.duotone")
 -- core.reload_module("colors.github_dark")
+core.reload_module("colors.toma")
 -- core.reload_module("colors.plasma")
 
+-- light:
+-- core.reload_module("colors.github")
+-- core.reload_module("colors.moe")
+
+-- do not like (can delete)
 -- core.reload_module("colors.gruvbox_dark")
 -- core.reload_module("colors.monokai-pro-classic")
 -- core.reload_module("colors.tokyo-night")
 
 --------------------------- Key bindings -------------------------------------
 
--- key binding:
 -- keymap.add { ["ctrl+escape"] = "core:quit" }
 keymap.add { ["f1"] = "core:find-command" }
 keymap.add { ["f2"] = "treeview:toggle" }
+keymap.add { ["f5"] = "console:run" }
+keymap.add { ["ctrl+f5"] = "console:toggle" }
 
 ------------------------------- Fonts ----------------------------------------
 
 -- customize fonts
 -- style.font = renderer.font.load(DATADIR .. "/fonts/FiraSans-Regular.ttf", 14 * SCALE)
--- style.code_font = renderer.font.load(DATADIR .. "/fonts/JetBrainsMono-Regular.ttf", 14 * SCALE)
+style.code_font = renderer.font.load(DATADIR .. "/fonts/JetBrainsMono-Regular.ttf", 16 * SCALE)
+-- style.code_font = renderer.font.load("/usr/share/fonts/TTF/iosevka.ttf", 18 * SCALE)
+
+-- style.code_font = renderer.font.load("/usr/share/fonts/bitmap/tobi/CodingFontTobi1.pcf",  20 * SCALE)
 --
 -- DATADIR is the location of the installed Lite XL Lua code, default color
--- schemes and fonts.
--- USERDIR is the location of the Lite XL configuration directory.
+-- schemes and fonts. (/usr/share/lite-xl/)
+-- USERDIR is the location of the Lite XL configuration directory. (~/.config/lite-xl)
 --
 -- font names used by lite:
 -- style.font          : user interface
@@ -67,20 +77,49 @@ config.plugins.bigclock = true
 config.plugins.navigate = true
 config.plugins.copyfilelocation = true
 config.plugins.extend_selection_line = true
-config.plugins.my_plugin = true
-config.plugins.dashboard = true
+-- config.plugins.my_plugin = true
+-- config.plugins.dashboard = true
+config.plugins.autoinsert = true
+config.plugins.colorpreview = true
+config.plugins.gitstatus = true
+config.plugins.markers = true
+config.plugins.console = true
+config.plugins.spellcheck = true
+config.plugins.select_colorscheme = true
+config.plugins.autosaveonfocuslost = true
+config.plugins.smallclock = true
+config.plugins.indentguide = true
+config.plugins.motiontrail = true
+config.plugins.selectionhighlight = true
+
+-- config.plugins.custom_caret.shape = "block"
+
+config.plugins.linenumbers = true
+config.line_numbers = true
+config.relative_line_numbers = true
+
+-- language stuff
+config.plugins.language_gdscript = true
 
 -- disable detectindent, otherwise it is enabled by default
--- config.plugins.detectindent = false
+config.plugins.detectindent = false
 config.plugins.autosave = false
-config.plugins.motiontrail = false
 config.plugins.typingspeed = false
 config.plugins.bracketmatch = false
-config.plugins.lfautoinsert = false
 config.plugins.centerdoc = false
-config.plugins.colorpreview = false
+config.plugins.statusclock = false
+config.plugins.rainbowparen = false
+config.plugins.custom_caret = false
+
+
+
 
 ---------------------------- Miscellanous --------------------------------------
+-- config.force_scrollbar_status = "expanded" -- makes the scroll bar permanently wide
+-- config.transitions = false
+config.tab_type = "hard"
+config.indent_size = 4
+
 -- modify list of files to ignore when indexing the project:
 -- config.ignore_files = {
 --   -- folders
