@@ -895,7 +895,7 @@ c.content.javascript.can_open_tabs_automatically = False
 
 ## Enable JavaScript.
 ## Type: Bool
-c.content.javascript.enabled = False
+c.content.javascript.enabled = True
 
 ## Log levels to use for JavaScript console logging messages. When a
 ## JavaScript message with the level given in the dictionary key is
@@ -925,7 +925,7 @@ c.content.local_content_can_access_remote_urls = True
 
 ## Enable support for HTML 5 local storage and Web SQL.
 ## Type: Bool
-# c.content.local_storage = True
+c.content.local_storage = True
 
 ## Allow websites to record audio.
 ## Type: BoolAsk

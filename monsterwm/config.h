@@ -13,15 +13,15 @@
 #define SHOW_PANEL      False      /* show panel by default on exec */
 #define TOP_PANEL       False      /* False means panel is on bottom */
 #define PANEL_HEIGHT    18        /* 0 for no space for panel, thus no panel */
-#define DEFAULT_MODE    TILE    /* initial layout/mode: TILE MONOCLE BSTACK GRID FLOAT */
+#define DEFAULT_MODE    BSTACK    /* initial layout/mode: TILE MONOCLE BSTACK GRID FLOAT */
 #define ATTACH_ASIDE    True      /* False means new window is master */
 #define FOLLOW_WINDOW   False     /* follow the window when moved to a different desktop */
 #define FOLLOW_MOUSE    True      /* focus the window the mouse just entered */
 #define CLICK_TO_FOCUS  True      /* focus an unfocused window when clicked  */
 #define FOCUS_BUTTON    Button1   /* mouse button to be used along with CLICK_TO_FOCUS */
-#define BORDER_WIDTH    1         /* window border width */
-#define FOCUS           "#66aabb" /* focused window border color    */
-#define UNFOCUS         "#444444" /* unfocused window border color  */
+#define BORDER_WIDTH    6         /* window border width */
+#define FOCUS           "#2b57fc" /* focused window border color    */
+#define UNFOCUS         "#222222" /* unfocused window border color  */
 #define MINWSZ          50        /* minimum window size in pixels  */
 #define DEFAULT_DESKTOP 0         /* the desktop to focus initially */
 #define DESKTOPS        4         /* number of desktops - edit DESKTOPCHANGE keys to suit */
@@ -32,7 +32,8 @@
  */
 static const AppRule rules[] = { \
     /*  class     desktop  follow  float */
-    {   "Gimp",        0,    False,  False  },
+    {   "firefox",   1,    False,  False  },
+    {   "qbittorrent",   3,    False,  False  },
 };
 
 /* helper for spawning shell commands */
@@ -45,15 +46,9 @@ static const AppRule rules[] = { \
 static const char *termcmd[] = { "st", NULL };
 static const char *alsamixer[] = { "st", "-e", "alsamixer", NULL};
 static const char *quteb[] = { "qutebrowser", NULL};
-static const char *fm[] = { "st", "-e", "fff", NULL}; /* File manager */
-static const char *ytfzf[] = { "st", "-e", "ytfzf", "-l", "-s", NULL}; /* File manager */
-static const char *menucmd[] = { "dmenu_run", "-b", 
-								"-nb", "#161616",
-								"-sb", "#222222",
-								"-fn", "FiraCode",
-								"-p", "computer activate",
-								NULL };
-/* static const char *emacs[] = { "emacsclient", "-c", "-a 'nvim'", NULL }; */
+static const char *fm[] = { "st", "-e", "lf", NULL}; /* File manager */
+static const char *flameshot[] = { "flameshot", "gui", NULL}; /* Screenshot Tool */
+static const char *menucmd[] = { "bemenu-run", NULL };
 
 #define DESKTOPCHANGE(K,N) \
     {  MOD1,             K,              change_desktop, {.i = N}}, \
@@ -92,7 +87,7 @@ static Key keys[] = {
     {  MOD4,             XK_v,          spawn,             {.com = menucmd}},
     {  MOD4,             XK_a,          spawn,             {.com = alsamixer}},
     {  MOD4,             XK_q,          spawn,             {.com = quteb}},
-    {  MOD4,             XK_y,          spawn,             {.com = ytfzf}},
+    {  MOD4,             XK_s,          spawn,             {.com = flameshot}},
     {  MOD4,             XK_f,          spawn,             {.com = fm}},
     /* {  MOD4,             XK_e,          spawn,             {.com = emacs}}, */
     {  MOD4,             XK_j,          moveresize,        {.v = (int []){   0,  25,   0,   0 }}}, /* move down  */
